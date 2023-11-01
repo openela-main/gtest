@@ -1,0 +1,24 @@
+diff -up googletest-release-1.8.0/googlemock/CMakeLists.txt.libdir googletest-release-1.8.0/googlemock/CMakeLists.txt
+--- googletest-release-1.8.0/googlemock/CMakeLists.txt.libdir	2016-08-31 16:20:48.805836249 -0600
++++ googletest-release-1.8.0/googlemock/CMakeLists.txt	2016-08-31 16:19:24.596216228 -0600
+@@ -104,7 +104,7 @@ endif()
+ #
+ # Install rules
+ install(TARGETS gmock gmock_main
+-  DESTINATION lib)
++  DESTINATION lib${LIB_SUFFIX})
+ install(DIRECTORY ${gmock_SOURCE_DIR}/include/gmock
+   DESTINATION include)
+ 
+diff -up googletest-release-1.8.0/googletest/CMakeLists.txt.libdir googletest-release-1.8.0/googletest/CMakeLists.txt
+--- googletest-release-1.8.0/googletest/CMakeLists.txt.libdir	2016-07-14 11:15:38.000000000 -0600
++++ googletest-release-1.8.0/googletest/CMakeLists.txt	2016-08-31 16:20:19.357969126 -0600
+@@ -103,7 +103,7 @@ endif()
+ #
+ # Install rules
+ install(TARGETS gtest gtest_main
+-  DESTINATION lib)
++  DESTINATION lib${LIB_SUFFIX})
+ install(DIRECTORY ${gtest_SOURCE_DIR}/include/gtest
+   DESTINATION include)
+ 
